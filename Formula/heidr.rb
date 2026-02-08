@@ -1,8 +1,8 @@
 class Heidr < Formula
   desc "EVM blockchain CLI tool"
   homepage "https://github.com/pxlvre/heidr"
-  url "https://github.com/pxlvre/heidr/archive/refs/tags/v0.0.4.tar.gz"
-  sha256 "49195dc96e04c13afe41619ca278470dfbd9753d7f0d0f831f96c18ea548045d"
+  url "https://github.com/pxlvre/heidr/archive/refs/tags/v0.0.5.tar.gz"
+  sha256 "6e896603b28ab85fc9cf4daa500a2d4c45126e4c7ed2f56f63625a7f4ee6fc4d"
   license "AGPL-3.0-or-later"
   head "https://github.com/pxlvre/heidr.git", branch: "master"
 
