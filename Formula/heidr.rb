@@ -6,7 +6,7 @@ class Heidr < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/pxlvre/heidr.git", branch: "master"
 
-  depends_on "bun"
+  depends_on "oven-sh/bun/bun"
 
   def install
     # Install all source files
@@ -20,7 +20,7 @@ class Heidr < Formula
     # Create wrapper script
     (bin/"heidr").write <<~EOS
       #!/bin/bash
-      exec "#{Formula["bun"].opt_bin}/bun" "#{libexec}/cli/index.ts" "$@"
+      exec "#{HOMEBREW_PREFIX}/bin/bun" "#{libexec}/cli/index.ts" "$@"
     EOS
   end
 
