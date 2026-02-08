@@ -12,9 +12,9 @@ class Heidr < Formula
     # Install all source files
     libexec.install Dir["*"]
     
-    # Install dependencies
+    # Install dependencies (ignore prepare scripts to avoid husky)
     cd libexec do
-      system "bun", "install", "--frozen-lockfile", "--production"
+      system "bun", "install", "--frozen-lockfile", "--production", "--ignore-scripts"
     end
     
     # Create wrapper script
@@ -25,6 +25,6 @@ class Heidr < Formula
   end
 
   test do
-    assert_match "0.0.3", shell_output("#{bin}/heidr --version")
+    assert_match "0.0.5", shell_output("#{bin}/heidr --version")
   end
 end
