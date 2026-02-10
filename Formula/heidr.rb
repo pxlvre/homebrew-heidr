@@ -25,6 +25,6 @@ class Heidr < Formula
   end
 
   test do
-    assert_match "0.0.5", shell_output("#{bin}/heidr --version")
+    assert_match "0.0.7", shell_output("#{bin}/heidr --version")
   end
 end
